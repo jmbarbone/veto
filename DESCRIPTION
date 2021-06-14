@@ -1,0 +1,25 @@
+Package: veto
+Title: Simple Error Messages for Conditions
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Jordan Mark",
+           family = "Barbone",
+           role = c("aut", "cph", "cre"),
+           email = "jmbarbone@gmail.com",
+           comment = c(ORCID = "0000-0001-9788-3628"))
+Description: Simplified functions intended to check function parameters to
+    ensure they meet specific requirements before continuing; otherwise vetoed
+    and stopped with an error.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Language: en-US
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Suggests: 
+    knitr,
+    rmarkdown,
+    spelling,
+    testthat (>= 3.0.0)
+VignetteBuilder: knitr
+Config/testthat/edition: 3

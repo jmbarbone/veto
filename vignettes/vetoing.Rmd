@@ -1,0 +1,33 @@
+---
+title: "vetoing"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{vetoing}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(veto)
+```
+
+Vetos are ready-made `stop()``s designed specifically to be called in functions to require quick checks on types, lengths, classes, etc.
+
+```{r a function}
+foo <- function(a, b) {
+  veto_integer(a)
+  veto_double(b, 2L)
+  a * prod(b)
+}
+
+foo(1L, c(0.5, 1))
+try(foo(1L, 0))
+```
+
